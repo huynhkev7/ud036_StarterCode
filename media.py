@@ -1,3 +1,7 @@
+"""Class that contains details about a movie."""
+import webbrowser
+
+
 class Movie(object):
     """
     Class to stores common properties related to a movie.
@@ -10,3 +14,7 @@ class Movie(object):
         self.title = title
         self.poster_image_url = poster_image_url
         self.trailer_youtube_url = trailer_youtube_url
+
+    def show_trailer(self):
+        """ Open the movie trailer in a web broser."""
+        webbrowser.open(self.trailer_youtube_url)
